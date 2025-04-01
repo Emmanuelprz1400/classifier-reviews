@@ -1,17 +1,11 @@
-# classifier-reviews
+# Logistic Regression
 
-Se utiliza regresión logistica con penalización Ridge y Lasso para realizar una clasificación binaria según la autenticidad de comentarios a hoteles, utilizando un corpus de 1600 opiniones a hoteles de Chicago. Este corpus consiste en críticas falsas y autenticas de 20 hoteles de Chicago. Los datos fueron originalmente descritos en dos documentos de acuerdo con el sentimiento positivo o negativo de los mismos:
+**Logistic Regression**: Estima la probabilidad de que ocurra un evento,basándose en un conjunto de datos determinado de variables independientes.
 
-Este corpus contiene:
+Este tipo de modelo estadístico (conocido también como _logit_), se utiliza a menudo para la clasificación y el análisis predictivo. Dado que el resultado es una probabilidad, la variable dependiente está limitada entre 0 y 1. En la regresión logística, se aplica una transformación _logit_ a las probabilidades, es decir, la probabilidad de éxito dividida entre la probabilidad de fracaso.
 
-- 800 comentarios auténticos, de los cuáles 400 están clasificados como positivos y 400 como negativos
-- 800 comentarios falsos, igualmente dividio en 400 comentarios positvas y 400 negativos.
+Hay tres tipos de modelos de regresión logística, que se definen en función de la respuesta categórica.
 
-La vectorización de los textos se realiza utilizando la técnica Bag of Words (BoW) o Bolsa de Palabras, de manera que se obtiene una matriz de 1600 documentos por 3,528 palabras.
-
-El conjunto de datos original puede ser descargado [aquí](https://myleott.com/op-spam.html). Este mismo ha sido también publicado por [Kaggle](https://www.kaggle.com/datasets/rtatman/deceptive-opinion-spam-corpus) en un archivo csv, el cual ha sido copiado en el presente repositorio.
-
-
-[1] M. Ott, Y. Choi, C. Cardie, and J.T. Hancock. 2011. Finding Deceptive Opinion Spam by Any Stretch of the Imagination. In Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies.
-
-[2] M. Ott, C. Cardie, and J.T. Hancock. 2013. Negative Deceptive Opinion Spam. In Proceedings of the 2013 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies.
+- **Regresión logística binaria**: En este enfoque, la respuesta o variable dependiente es dicotómica, es decir, solo tiene dos resultados posibles (por ejemplo, 0 o 1). Algunos ejemplos populares de su uso incluyen predecir si un correo electrónico es spam o no.
+- **Regresión logística multinomial**: La variable dependiente tiene tres o más resultados posibles; sin embargo, estos valores no tienen un orden específico. Por ejemplo, los estudios cinematográficos buscan predecir el género de película que probablemente verá un espectador para comercializarla de forma más eficaz. Un modelo multinomial puede ayudar al estudio a determinar la influencia que la edad, el sexo y la situación sentimental de una persona pueden tener en el tipo de película que prefiere. De esta forma, el estudio puede orientar una campaña publicitaria de una película específica hacia un grupo de personas con probabilidades de ir a verla.
+- **Regresión logística ordinal**: Este tipo de modelo de regresión logística se utiliza cuando la variable de respuesta tiene tres o más resultados posibles, pero en este caso, estos valores tienen un orden definido. Ejemplos de respuestas ordinales incluyen escalas de calificación de la A a la F o escalas de valoración del 1 al 5.
